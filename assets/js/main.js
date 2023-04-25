@@ -19,7 +19,7 @@ createApp({
     methods: {
         // funzioni Vue3
         getEmail(variabile) {
-            for (let i = 0; i <= variabile; i++) {
+            for (let i = 1; i <= variabile; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((res) => {
                     let result = res.data.response;
@@ -41,8 +41,6 @@ createApp({
             } else {
                 this.getEmail(this.numInput)
             }
-
-            
         }
         
     }
