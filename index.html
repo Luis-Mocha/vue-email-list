@@ -18,6 +18,12 @@
         <!-- il codice html va qui -->
         <div class="container">
             <h1 class="text-uppercase text-center">Esercizio: vue-email-list</h1>
+
+            <div v-for="(elem, index) in emailList" :key="index">
+                <li> {{elem}}</li>
+            </div>
+
+            <button @click="getEmail()">Click me</button>
         </div>
         
        
