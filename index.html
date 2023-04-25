@@ -29,9 +29,9 @@
                 <span v-if="showEmail === true">Rigenera {{numInput}} Email</span> 
             </button>
 
-            <ul v-if="showEmail === true" v-for="(elem, index) in emailList" :key="index">
-                <li> {{elem}}</li>
-            </ul>
+            <div v-if="showEmail === true" v-for="(elem, index) in emailList" :key="index">
+                <li>{{index + 1}} - {{elem}}</li>
+            </div>
 
             
         </div>
