@@ -18,15 +18,18 @@ createApp({
     methods: {
         // funzioni Vue3
         getEmail() {
-            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then((res) => {
-                let result = res.data.response;
-                console.log(res, result);
-                this.email = result;
-                console.log(this.email);
+            for (let i = 0; i < 10; i++) {
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then((res) => {
+                    let result = res.data.response;
+                    console.log(res, result);
+                    this.email = result;
+                    console.log(this.email);
 
-                this.emailList.push(this.email)
+                    this.emailList.push(this.email)
             });
+            }
+            
         }
     }
 }).mount('#app')
