@@ -6,5 +6,4 @@ Attraverso l'apposita API di Boolean: `https://flynn.boolean.careers/exercises/a
 
 ---
 
-Link per utilizzare **Axios**: `    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-`.
+Link per utilizzare **Axios**: `<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>`.

@@ -21,7 +21,7 @@
 
             <div class="form text-center my-3">
                 <label for="floatingInput" class="me-3">Quante email vuoi creare?</label>
-                <input type="number" id="floatingInput" placeholder="10" v-model="numInput" @KeyUp.enter="showEmails()">
+                <input class="w-100" type="number" min="1" id="floatingInput" placeholder="Inserisci un numero maggiore di 0" v-model="numInput" @KeyUp.enter="showEmails()">
             </div>
 
             <button @click="showEmails()" class="d-block mx-auto my-4">
