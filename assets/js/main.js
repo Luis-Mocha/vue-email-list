@@ -7,18 +7,19 @@ createApp({
             email: {},
             emailList: [],
             showEmail: false,
+            numInput: 10,
         }
     },
 
     created() { 
         //cicli di vita dei componenti di applicazioni Vue. Vengono eseguite azioni al caricamento dei componenti
-        this.getEmail()
+        // this.getEmail(this.numInput)
     },
 
     methods: {
         // funzioni Vue3
-        getEmail() {
-            for (let i = 0; i < 10; i++) {
+        getEmail(variabile) {
+            for (let i = 0; i <= variabile; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((res) => {
                     let result = res.data.response;
@@ -30,8 +31,18 @@ createApp({
                 })
             } 
         },
+
         showEmails () {
-            this.showEmail = true;
+            this.emailList = []
+
+            if (this.showEmail === false) {
+                this.showEmail = true;
+                this.getEmail(this.numInput)
+            } else {
+                this.getEmail(this.numInput)
+            }
+
+            
         }
         
     }

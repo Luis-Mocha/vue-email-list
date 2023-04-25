@@ -16,14 +16,24 @@
      <!-- #app -->
      <div id="app">
         <!-- il codice html va qui -->
-        <div class="container">
+        <div class="container py-4">
             <h1 class="text-uppercase text-center">Esercizio: vue-email-list</h1>
+
+            <div class="form text-center my-3">
+                <label for="floatingInput" class="me-3">Quante email vuoi creare?</label>
+                <input type="number" id="floatingInput" placeholder="10" v-model="numInput" @KeyUp.enter="showEmails()">
+            </div>
+
+            <button @click="showEmails()" class="d-block mx-auto my-4">
+                <span v-if="showEmail === false">Genera {{numInput}} Email</span>
+                <span v-if="showEmail === true">Rigenera {{numInput}} Email</span> 
+            </button>
 
             <ul v-if="showEmail === true" v-for="(elem, index) in emailList" :key="index">
                 <li> {{elem}}</li>
             </ul>
 
-            <button @click="showEmails()" class="d-block mx-auto my-5">Genera 10 Email</button>
+            
         </div>
         
        
