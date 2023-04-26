@@ -4,7 +4,6 @@ createApp({
     data() {
         return {
             // variabili Vue3
-            email: {},
             emailList: [],
             showEmail: false,
             numInput: 10,
@@ -24,10 +23,7 @@ createApp({
                 .then((res) => {
                     let result = res.data.response;
                     // console.log(res, result);
-                    this.email = result;
-                    // console.log(this.email);
-                    this.emailList.push(this.email)
-                    
+                    this.emailList.push(result)
                 })
             } 
         },
